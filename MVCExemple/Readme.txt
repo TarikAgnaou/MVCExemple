@@ -27,3 +27,19 @@ Dans le model on peut décorer chaque champs avec :
 	- [Display(Name = "xxx")]	=>	quel nom lui donnera-t-on à l'affichage
 	- [DataType(DataType.Date)]	=>	quel style de type de donnée va-t-on afficher
 
+Dans le fichier _ViewStart.cshtml on définie quel layout on va utiliser par rapport à quel controller on utilise
+	@{
+	    ViewBag.QSParameter = Context.Request.Query["parameter"];
+
+	    var controller = Context.Request.RouteValues["Controller"].ToString();
+
+	    if (controller != "Admin")
+	    {
+        	Layout = "~/Views/Shared/_Layout.cshtml";
+	    }
+	    else
+	    {
+        	Layout = "~/Views/Admin/_Layout.cshtml";
+	    }
+	}
+	
