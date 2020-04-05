@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Se connecter";
+}
+
+<div id="page-wrapper">
+    <center>
+        <div id="page-inner">
+            <center>
+                <div id="logreg-forms" class="col-4 col-lg-4 col-sm-4 col-md-4">
+                    <form class="form-signin">
+                        <h1 class="h3 mb-3 font-weight-normal" style="text-align: center">@ViewData["Title"]</h1>
+                        <div class="social-login" style="padding:5px">
+                            <button class="btn facebook-btn social-btn" type="button" style="background-color:#3C589C; color:white;padding:5px"><span><i class="fab fa-facebook-f"></i> via Facebook</span> </button>
+                            <br />
+                            <button class="btn google-btn social-btn" type="button" style="background-color: #DF4B3B; color:white;padding:5px"><span><i class="fab fa-google-plus-g"></i> via Google+</span> </button>
+                        </div>
+                        <p style="text-align:center"> Ou  </p>
+                        <div>
+                            <input type="email" id="inputEmail" class="form-control" placeholder="Adresse mail" required="" autofocus="">
+                            <input type="password" id="inputPassword" class="form-control" placeholder="Mot de passe" required="">
+                            <button class="btn btn-success btn-block" type="submit"><i class="fas fa-sign-in-alt"></i> Se connecter</button>
+                            <br />
+                            <a href="#" id="forgot_pswd">Mot de passe oublié?</a>
+                        </div>
+                    </form>
+                </div>
+            </center>
+        </div>
+    </center>
+</div>

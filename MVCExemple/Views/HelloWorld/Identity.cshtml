@@ -1,0 +1,22 @@
+﻿@model MVCExemple.Models.Identity;
+
+@{
+    ViewData["Title"] = "Identity";
+}
+
+<h1>Identity</h1>
+
+<dl>
+    <dt>
+        <label asp-for="Id"></label><br />
+        @Html.DisplayFor(Identity => Identity.Id)
+    </dt>
+    <dt>
+        <label asp-for="Nom"></label><br />
+        @Html.DisplayFor(Identity => Identity.Nom)
+    </dt>
+    <dt>
+        <label asp-for="Birthday"></label><br />
+        @Html.DisplayFor(Identity => Identity.Birthday)
+    </dt>
+</dl>

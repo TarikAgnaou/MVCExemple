@@ -1,0 +1,20 @@
+﻿@*@{
+    Layout = "_Layout";
+}*@
+
+@{
+    ViewBag.QSParameter = Context.Request.Query["parameter"];
+
+    var controller = Context.Request.RouteValues["Controller"].ToString();
+
+    //var controller = HttpContext.Current.Request.RequestContext.RouteData.Values["Controller"].ToString();
+    if (controller != "Admin")
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+    else
+    {
+        Layout = "~/Views/Admin/_Layout.cshtml";
+    }
+}
+
